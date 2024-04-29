@@ -23,9 +23,11 @@
 #define GPIO_LOW            0   
 #define GPIO_HIGH           1   
 
+#define GPIO_LOCK_KEY				0x4C4F434B
+#define GPIO_ENABLE_7_BIT			0x000000FF	
+#define GPIO_PCTL_VALUE				0x00000000
 
-
-void GPIO_InitPort(uint8_t PortID);
+Std_ReturnType GPIO_InitPort(uint8_t PortID);
 
 Std_ReturnType GPIO_SetPinDirection(uint8_t PortID, uint8_t PinId , uint8_t PinDirection);
 
@@ -37,15 +39,9 @@ Std_ReturnType GPIO_SetPortDirection(uint8_t PortID, uint8_t PortDirection);
 
 Std_ReturnType GPIO_SetPortValue(uint8_t PortID, uint8_t PortValue);
 
-Std_ReturnType GPIO_GetPinValue(uint8_t PortID, uint32_t *ReturnedPinValue);
+Std_ReturnType GPIO_GetPortValue(uint8_t PortID, uint32_t *ReturnedPortValue);
 
 Std_ReturnType GPIO_TogglePinValue(uint8_t PortID, uint8_t PinId);
-
-
-
-
-
-
 
 
 #endif /* GPIO_H */
