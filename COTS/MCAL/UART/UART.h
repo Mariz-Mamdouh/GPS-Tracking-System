@@ -13,7 +13,6 @@
 #define TXE                0x0100
 #define RXE                0x0200
 // define UART functions 
-
 void UART0_INIT(void);
 void UART2_INIT(void);
 void UART6_INIT(void);
