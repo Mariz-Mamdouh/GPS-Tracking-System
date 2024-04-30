@@ -1,4 +1,4 @@
-#include"../UART_INIT/UART.c"
+#include"../UART.c"
 #include"string.h"
 #include"stdint.h"
 void UART_OutString(char *pt){
