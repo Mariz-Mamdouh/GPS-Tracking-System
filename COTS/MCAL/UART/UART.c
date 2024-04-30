@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include "../../GPIO/GPIO.c"
+#include "GPIO.h"
 #include "UART.h"
 //*--------------------------------uart0---------------------------------*/
 void UART0_INIT(void)
