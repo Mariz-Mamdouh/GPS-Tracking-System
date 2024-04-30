@@ -33,6 +33,7 @@ int store_end_Point(){ //if PC send 'U' we need to store address in EEPPROM
 	return 0;
 
 } 
+/*
 int main(){
 	const int len_GPS = 100;
 	char GPS_Data[len_GPS] = "0";
@@ -44,4 +45,4 @@ int main(){
 //separate between latitude and longitude	
 
 	}
-}
+}*/
