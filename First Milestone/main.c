@@ -13,3 +13,11 @@ int main(){
 	LED_Init();
 	GPIO_SetPinDirection(GPIO_PORTF, GPIO_PIN4, GPIO_INPUT);
 	
+while(1){
+		GPIO_GetPinValue(GPIO_PORTF, GPIO_PIN4, &Button_1);
+		if(Button_1 != 0x01)
+			LED_RedON();
+		else
+			LED_RedOFF();
+	}	
+}
