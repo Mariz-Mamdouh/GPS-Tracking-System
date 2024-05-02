@@ -21,8 +21,7 @@ int i ;
 }
 	
 }
-// *************** UART2 >> LCD functions***********
-// we need to set 8 pins as output and Calculate distance to see it on LCD
+
 
 // *************** UART6 >> PC functions***********
 int store_end_Point(){ //if PC send 'U' we need to store address in EEPPROM
