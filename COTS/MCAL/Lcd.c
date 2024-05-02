@@ -1,4 +1,4 @@
-#include "../GPIO/GPIO.h"
+#include "GPIO/GPIO.h"
 void init_LCD(void){
 /*in LCD Pin 4 >> Register Select command or data
   -------pin 5 >> Read/Write
