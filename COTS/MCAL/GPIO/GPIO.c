@@ -329,4 +329,259 @@ Std_ReturnType GPIO_GetPinValue(uint8_t PortID, uint8_t PinId , uint32_t *Return
     return Local_FunctionStatus; 
 }
 
+Std_ReturnType GPIO_SetPortDirection(uint8_t PortID, uint8_t PortDirection)
+{
+    Std_ReturnType Local_FunctionStatus = E_NOT_OK;
 
+    if((PortID>=GPIO_PORTA && PortID<=GPIO_PORTF) && (PortDirection==GPIO_OUTPUT || PortDirection==GPIO_INPUT))
+	{
+		switch(PortID)
+		{
+			case GPIO_PORTA:
+				switch(PortDirection)
+				{
+					case GPIO_OUTPUT: 
+                        GPIO_PORTA_DIR_R = 0XFF;
+                        Local_FunctionStatus = E_OK;
+                    break;
+					case GPIO_INPUT:
+                        GPIO_PORTA_DIR_R = 0X00;
+                        Local_FunctionStatus = E_OK;
+                    break;
+					default:
+                        Local_FunctionStatus = E_NOT_OK;
+                    break;
+				}
+			break;
+			case GPIO_PORTB:
+				switch(PortDirection)
+				{
+					case GPIO_OUTPUT:
+                        GPIO_PORTB_DIR_R = 0XFF;
+                        Local_FunctionStatus = E_OK;
+                    break;
+					case GPIO_INPUT:
+                        GPIO_PORTB_DIR_R = 0X00;
+                        Local_FunctionStatus = E_OK;
+                    break;
+					default:
+                        Local_FunctionStatus = E_NOT_OK;
+                    break;
+				}
+			break;	
+			case GPIO_PORTC:
+				switch(PortDirection)
+				{
+					case GPIO_OUTPUT:
+                        GPIO_PORTC_DIR_R = 0XFF;
+                        Local_FunctionStatus = E_OK;
+                    break;
+					case GPIO_INPUT:
+                        GPIO_PORTC_DIR_R = 0X00;
+                        Local_FunctionStatus = E_OK;
+                    break;
+					default:
+                        Local_FunctionStatus = E_NOT_OK;
+                    break;
+				}
+			break;	
+			case GPIO_PORTD:
+				switch(PortDirection)
+				{
+					case GPIO_OUTPUT:
+                        GPIO_PORTD_DIR_R = 0XFF;
+                        Local_FunctionStatus = E_OK;
+                    break;
+					case GPIO_INPUT:
+                        GPIO_PORTD_DIR_R = 0X00;
+                        Local_FunctionStatus = E_OK;
+                    break;
+					default:
+                        Local_FunctionStatus = E_NOT_OK;
+                    break;
+				}
+			break;	
+			case GPIO_PORTE:
+				switch(PortDirection)
+				{
+					case GPIO_OUTPUT:
+                        GPIO_PORTE_DIR_R = 0XFF;
+                        Local_FunctionStatus = E_OK;
+                    break;
+					case GPIO_INPUT:
+                        GPIO_PORTE_DIR_R = 0X00;
+                        Local_FunctionStatus = E_OK;
+                    break;
+					default:
+                        Local_FunctionStatus = E_NOT_OK;
+                    break;
+				}
+			break;	
+			case GPIO_PORTF:
+				switch(PortDirection)
+				{
+					case GPIO_OUTPUT:
+                        GPIO_PORTF_DIR_R = 0XFF;
+                        Local_FunctionStatus = E_OK;
+                    break;
+					case GPIO_INPUT:
+                        GPIO_PORTF_DIR_R = 0X00;
+                        Local_FunctionStatus = E_OK;
+                    break;
+					default:
+                        Local_FunctionStatus = E_NOT_OK;
+                    break;
+				}
+			break;				
+		}
+	}
+	else
+	{
+		Local_FunctionStatus = E_NOT_OK;
+	}
+
+    return Local_FunctionStatus; 
+}
+
+Std_ReturnType GPIO_SetPortValue(uint8_t PortID, uint8_t PortValue)
+{
+    Std_ReturnType Local_FunctionStatus = E_NOT_OK;
+
+    if((PortID>=GPIO_PORTA && PortID<=GPIO_PORTF) && (PortValue==GPIO_LOW || PortValue==GPIO_HIGH))
+	{
+		switch(PortID)
+		{
+			case GPIO_PORTA:
+                GPIO_PORTA_DATA_R = PortValue;
+                Local_FunctionStatus = E_OK;
+            break;
+			case GPIO_PORTB:
+                GPIO_PORTB_DATA_R = PortValue;
+                Local_FunctionStatus = E_OK;
+            break;
+			case GPIO_PORTC:
+                GPIO_PORTC_DATA_R = PortValue;
+                Local_FunctionStatus = E_OK;
+            break;
+			case GPIO_PORTD:
+                GPIO_PORTD_DATA_R = PortValue;
+                Local_FunctionStatus = E_OK;
+            break;
+			case GPIO_PORTE:
+                GPIO_PORTE_DATA_R = PortValue;
+                Local_FunctionStatus = E_OK;
+            break;
+			case GPIO_PORTF:
+                GPIO_PORTF_DATA_R = PortValue;
+                Local_FunctionStatus = E_OK;
+            break;
+			default:
+            Local_FunctionStatus = E_NOT_OK;
+            break;
+		}
+	}
+	else
+	{
+		Local_FunctionStatus = E_NOT_OK;
+	}
+
+    return Local_FunctionStatus; 
+}
+
+Std_ReturnType GPIO_GetPortValue(uint8_t PortID, uint32_t *ReturnedPortValue)
+{
+    Std_ReturnType Local_FunctionStatus = E_NOT_OK;
+
+    if((PortID>=GPIO_PORTA && PortID<=GPIO_PORTF) && (ReturnedPortValue != NULL))
+	{
+		switch(PortID)
+		{
+			case GPIO_PORTA:
+                *ReturnedPortValue = GPIO_PORTA_DATA_R;
+                Local_FunctionStatus = E_OK;
+            break;
+			case GPIO_PORTB:
+                *ReturnedPortValue = GPIO_PORTB_DATA_R;
+                Local_FunctionStatus = E_OK;
+            break;
+			case GPIO_PORTC:
+                *ReturnedPortValue = GPIO_PORTC_DATA_R;
+                Local_FunctionStatus = E_OK;
+            break;
+			case GPIO_PORTD:
+                *ReturnedPortValue = GPIO_PORTD_DATA_R;
+                Local_FunctionStatus = E_OK;
+            break;
+			case GPIO_PORTE:
+                *ReturnedPortValue = GPIO_PORTE_DATA_R;
+                Local_FunctionStatus = E_OK;
+            break;
+			case GPIO_PORTF:
+                *ReturnedPortValue = GPIO_PORTF_DATA_R;
+                Local_FunctionStatus = E_OK;
+            break;
+			default:
+            Local_FunctionStatus = E_NOT_OK;
+            break;
+		}
+	}
+	else
+	{
+		Local_FunctionStatus = E_NOT_OK;
+	}
+
+    return Local_FunctionStatus; 
+}
+
+Std_ReturnType GPIO_TogglePinValue(uint8_t PortID, uint8_t PinId)
+{
+    Std_ReturnType Local_FunctionStatus = E_NOT_OK;
+
+     if((PortID<=GPIO_PORTF && PortID>=GPIO_PORTA) && (PinId<=GPIO_PIN7 && PinId>=GPIO_PIN0))
+    {
+        switch(PortID)
+        {
+        case GPIO_PORTA:
+            TOG_BIT(GPIO_PORTA_DATA_R,PinId);
+            break;
+        case GPIO_PORTB:
+            TOG_BIT(GPIO_PORTB_DATA_R,PinId);
+            break;
+        case GPIO_PORTC:
+            TOG_BIT(GPIO_PORTC_DATA_R,PinId);
+            break;
+        case GPIO_PORTD:
+            TOG_BIT(GPIO_PORTD_DATA_R,PinId);
+            break;
+        case GPIO_PORTE:
+            if(PinId<=GPIO_PIN4)
+            {
+                TOG_BIT(GPIO_PORTE_DATA_R,PinId);
+            }
+            else
+            {
+                Local_FunctionStatus = E_NOT_OK;
+            }
+            break;
+        case GPIO_PORTF:
+            if(PinId<=GPIO_PIN4)
+            {
+                TOG_BIT(GPIO_PORTF_DATA_R,PinId);
+            }
+            else
+            {
+                Local_FunctionStatus = E_NOT_OK;
+            }
+            break;
+        default:
+            Local_FunctionStatus = E_NOT_OK;
+        break;
+        }
+    }
+    else
+    {
+        Local_FunctionStatus = E_NOT_OK;
+    }
+
+    return Local_FunctionStatus; 
+}
