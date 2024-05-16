@@ -1,0 +1,12 @@
+.\gps.o: GPS.c
+.\gps.o: BIT_MATH.h
+.\gps.o: STD_TYPES.h
+.\gps.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\gps.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\gps.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\gps.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\gps.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\gps.o: tm4c123gh6pm.h
+.\gps.o: UART.h
+.\gps.o: GPIO.h
+.\gps.o: GPS.h

@@ -1,0 +1,131 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Owner\Desktop\final test\final test\final.uvproj
+Project File Date:  05/16/2024
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+assembling startup_TM4C123.s...
+compiling main.c...
+STD_TYPES.h(9): warning:  #47-D: incompatible redefinition of macro "NULL" (declared at line 48 of "C:\Keil\ARM\ARMCC\bin\..\include\string.h")
+  #define NULL                 ((void*)0x0)                /**< Null pointer definition */
+STK.h(12): warning:  #1-D: last line of file ends without a newline
+  #endif
+EEPROM.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+main.c(126): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                if(strcmp(command_U, "U") ==0){
+main.c(135): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                        sprintf(lat_string, "%f", lat_eeprom);
+main.c(135): warning:  #181-D: argument is incompatible with corresponding format string conversion
+                        sprintf(lat_string, "%f", lat_eeprom);
+main.c(136): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                        sprintf(lon_string, "%f", lon_eeprom);
+main.c(136): warning:  #181-D: argument is incompatible with corresponding format string conversion
+                        sprintf(lon_string, "%f", lon_eeprom);
+main.c(175): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+    coordinateLength = strlen(coordinate);
+main.c(212): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+         sprintf(lat2_print, "%f", lat2);
+main.c(214): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+         sprintf(lon2_print, "%f", lon2);
+main.c(230): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+    sprintf(DIST, "%f", distance);
+main.c(233): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+    LCDLength = strlen(DIST);
+main.c(92): warning:  #550-D: variable "LATITUDE" was set but never used
+    float LATITUDE[]={0}; //check if not predefining the array size is correct
+main.c(93): warning:  #550-D: variable "LONGITUDE" was set but never used
+    float LONGITUDE[]={0};
+main.c(94): warning:  #177-D: variable "LCD_Print" was declared but never referenced
+    uint8_t LCD_Print[]={0};
+main.c(106): warning:  #177-D: variable "Switch_1" was declared but never referenced
+    uint32_t Switch_1;
+main.c(114): warning:  #177-D: variable "length_Of_Coordinate" was declared but never referenced
+    const uint32_t length_Of_Coordinate = 400 ;
+main.c: 18 warnings, 0 errors
+compiling GPIO.c...
+GPIO.c(12): warning:  #186-D: pointless comparison of unsigned integer with zero
+      if(PortID>=GPIO_PORTA && PortID<=GPIO_PORTF)
+GPIO.c(83): warning:  #186-D: pointless comparison of unsigned integer with zero
+      if((PortID<=GPIO_PORTF && PortID>=GPIO_PORTA) && (PinId<=GPIO_PIN7 && PinId>=GPIO_PIN0) && (PinDirection==GPIO_INPUT || PinDirection==GPIO_OUTPUT))
+GPIO.c(83): warning:  #186-D: pointless comparison of unsigned integer with zero
+      if((PortID<=GPIO_PORTF && PortID>=GPIO_PORTA) && (PinId<=GPIO_PIN7 && PinId>=GPIO_PIN0) && (PinDirection==GPIO_INPUT || PinDirection==GPIO_OUTPUT))
+GPIO.c(189): warning:  #186-D: pointless comparison of unsigned integer with zero
+      if((PortID<=GPIO_PORTF && PortID>=GPIO_PORTA) && (PinId<=GPIO_PIN7 && PinId>=GPIO_PIN0) && (PinValue==GPIO_HIGH || PinValue==GPIO_LOW))
+GPIO.c(189): warning:  #186-D: pointless comparison of unsigned integer with zero
+      if((PortID<=GPIO_PORTF && PortID>=GPIO_PORTA) && (PinId<=GPIO_PIN7 && PinId>=GPIO_PIN0) && (PinValue==GPIO_HIGH || PinValue==GPIO_LOW))
+GPIO.c(294): warning:  #186-D: pointless comparison of unsigned integer with zero
+        if((ReturnedPinValue != NULL) && (PortID<=GPIO_PORTF && PortID>=GPIO_PORTA) && (PinId>=GPIO_PIN0 && PinId<=GPIO_PIN7))
+GPIO.c(294): warning:  #186-D: pointless comparison of unsigned integer with zero
+        if((ReturnedPinValue != NULL) && (PortID<=GPIO_PORTF && PortID>=GPIO_PORTA) && (PinId>=GPIO_PIN0 && PinId<=GPIO_PIN7))
+GPIO.c(336): warning:  #186-D: pointless comparison of unsigned integer with zero
+      if((PortID>=GPIO_PORTA && PortID<=GPIO_PORTF) && (PortDirection==GPIO_OUTPUT || PortDirection==GPIO_INPUT))
+GPIO.c(450): warning:  #186-D: pointless comparison of unsigned integer with zero
+      if((PortID>=GPIO_PORTA && PortID<=GPIO_PORTF) && (PortValue==GPIO_LOW || PortValue==GPIO_HIGH))
+GPIO.c(495): warning:  #186-D: pointless comparison of unsigned integer with zero
+      if((PortID>=GPIO_PORTA && PortID<=GPIO_PORTF) && (ReturnedPortValue != NULL))
+GPIO.c(540): warning:  #186-D: pointless comparison of unsigned integer with zero
+       if((PortID<=GPIO_PORTF && PortID>=GPIO_PORTA) && (PinId<=GPIO_PIN7 && PinId>=GPIO_PIN0))
+GPIO.c(540): warning:  #186-D: pointless comparison of unsigned integer with zero
+       if((PortID<=GPIO_PORTF && PortID>=GPIO_PORTA) && (PinId<=GPIO_PIN7 && PinId>=GPIO_PIN0))
+GPIO.c: 12 warnings, 0 errors
+compiling STK.c...
+STK.h(12): warning:  #1-D: last line of file ends without a newline
+  #endif
+STK.c(31): warning:  #1-D: last line of file ends without a newline
+  }
+STK.c: 2 warnings, 0 errors
+compiling UART.c...
+UART.c(104): warning:  #111-D: statement is unreachable
+                break;
+UART.c(108): warning:  #111-D: statement is unreachable
+                break;
+UART.c(113): warning:  #940-D: missing return statement at end of non-void function "UART_Read_Char"
+  }
+UART.c(166): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                  if (strcmp(coordinate,GPS_Checkname)==0){
+UART.c(166): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                  if (strcmp(coordinate,GPS_Checkname)==0){
+UART.c(177): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                                strcpy (coordinate, "");
+UART.c(182): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                strcpy (coordinate, "");
+UART.c(149): warning:  #177-D: variable "recievedchar" was declared but never referenced
+                uint8_t recievedchar;
+UART.c(154): warning:  #177-D: variable "l" was declared but never referenced
+          uint8_t l;
+UART.c: 9 warnings, 0 errors
+compiling GPS.c...
+GPS.c(27): warning:  #174-D: expression has no effect
+              for(i; i<8; i++){
+GPS.c(37): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+      strcpy (fix, "");    //Init GPS Array 
+GPS.c(40): warning:  #174-D: expression has no effect
+        for (k; k<80; k++){
+GPS.c: 3 warnings, 0 errors
+compiling LED.c...
+compiling EEPROM.c...
+EEPROM.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+EEPROM.c(63): warning:  #1-D: last line of file ends without a newline
+  */
+EEPROM.c: 2 warnings, 0 errors
+compiling LCD.c...
+linking...
+Program Size: Code=17316 RO-data=1236 RW-data=40 ZI-data=536  
+".\final.axf" - 0 Error(s), 46 Warning(s).
+Load "C:\\Users\\Owner\\Desktop\\final test\\final test\\final.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+al.axf" - 0 Error(s), 48 Warning(s).
+Load "C:\\Users\\Owner\\Desktop\\final test\\final test\\final.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.

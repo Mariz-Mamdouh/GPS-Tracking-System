@@ -1,0 +1,13 @@
+--cpu Cortex-M4
+".\startup_tm4c123.o"
+".\main.o"
+".\gpio.o"
+".\stk.o"
+".\uart.o"
+".\gps.o"
+".\led.o"
+".\eeprom.o"
+".\lcd.o"
+--library_type=microlib --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\final.map" -o .\final.axf
