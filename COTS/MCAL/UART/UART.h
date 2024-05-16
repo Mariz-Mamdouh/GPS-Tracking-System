@@ -1,5 +1,12 @@
-//UART 
 #ifndef UART_H
+#define UART_H
+
+#include <stdint.h>
+
+#define U          0x55               //Ascii code for U
+#define CHECKSUM   0x2A               //Ascii code for *
+#define ENTER      0x0D              //ASCII code for ENTER
+
 #define UART_H
 #define UART0_enable       0x0001
 #define GPIOA_enable       0x0001
@@ -15,14 +22,22 @@
 // define UART functions 
 void UART0_INIT(void);
 void UART2_INIT(void);
-void UART6_INIT(void);
 
-char UART0_READ(void);
-void UART0_WRITE(unsigned char tx_data);
+typedef enum {
+    UART0 =0,
+    UART2 =2,
+}UART_NO;
 
-unsigned char UART2_READ(void);
-void UART2_WRITE(unsigned char data);
 
-unsigned char UART6_READ(void);
-void UART6_WRITE(unsigned char data);
+void UART_Init(uint8_t UART_no);
+uint8_t UART_Read_Char(uint8_t UART_no);
+void UART_Write_Char(uint8_t UART_no,uint8_t data);
+void UART_Get_String(uint8_t *Command, uint32_t len) ;
+void UART_Get_coord(uint8_t *coordinate, uint32_t len);
+void UART_Print_String(uint8_t UART_no ,uint8_t *pt);
+
+
+
+
+
 #endif
