@@ -1,7 +1,7 @@
 # **GPS Distance Tracking System**
 The GPS Distance Tracking System is an embedded system developed using the TM4C123G LaunchPad. It allows users to track the distance they travel between two points using GPS coordinates. The system provides visual feedback to the user through built-in LEDs, indicating when they are close to their destination or have reached it.
 ## Description
-The GPS Distance Tracking System is a project developed as part of the CSE 211 course at the Computer and Systems Engineering Department, Faculty of Engineering, during the Fall 2023 semester. The main objective of the project is to create an embedded system that accurately tracks the distance a user travels between two points using GPS coordinates. The system is implemented on the TM4C123G LaunchPad and provides real-time visual feedback to the user through LEDs.
+The GPS Distance Tracking System is a project developed as part of the CSE 211 course at the Computer and Systems Engineering Department, Faculty of Engineering, during the Spring 2024 semester. The main objective of the project is to create an embedded system that accurately tracks the distance a user travels between two points using GPS coordinates. The system is implemented on the TM4C123G LaunchPad and provides real-time visual feedback to the user through LEDs.
 ## Features
 The GPS subsystem performs the following tasks:
 
